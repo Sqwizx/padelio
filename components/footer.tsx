@@ -37,14 +37,14 @@ export function Footer() {
           <p className="text-2xl font-black" style={{ fontFamily: 'var(--font-display)' }}>PADELIO</p>
           <div className="flex items-center gap-4">
             {socialIcons.map(({ Icon, label, href }) => (
-              <a
+              <Link
                 key={label}
                 href={href}
                 aria-label={label}
                 className="p-2 rounded-full hover:bg-white/10 transition-colors"
               >
                 <Icon size={18} />
-              </a>
+              </Link>
             ))}
           </div>
           <p className="text-xs opacity-50">© {new Date().getFullYear()} Padelio. All rights reserved.</p>
