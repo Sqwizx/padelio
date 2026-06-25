@@ -53,10 +53,14 @@ export function Nav() {
     if (!mobileLinksRef.current) return;
     const items = mobileLinksRef.current.querySelectorAll('a');
     if (open) {
-      gsap.fromTo(items,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.06, duration: 0.4, ease: 'power2.out' }
-      );
+      const mm = gsap.matchMedia();
+      mm.add('(prefers-reduced-motion: no-preference)', () => {
+        gsap.fromTo(items,
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.06, duration: 0.4, ease: 'power2.out' }
+        );
+      });
+      return () => mm.revert();
     }
   }, [open]);
 

@@ -68,6 +68,41 @@ export default function MembershipPage() {
           ))}
         </div>
 
+        {/* Feature comparison table */}
+        <div className="mb-20 overflow-x-auto">
+          <h2 className="text-2xl font-black text-center mb-8" style={{ fontFamily: 'var(--font-display)', color: '#166534' }}>
+            Compare plans
+          </h2>
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr style={{ borderBottom: '2px solid var(--color-border)' }}>
+                <th className="text-left py-3 pr-4 font-semibold w-1/2">Feature</th>
+                {['Starter', 'Pro', 'Elite'].map((p) => (
+                  <th key={p} className="text-center py-3 px-4 font-semibold" style={{ color: '#166534' }}>{p}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Court bookings/month', '2', '8', 'Unlimited'],
+                ['Group sessions', '✓', 'Unlimited', 'Unlimited'],
+                ['Priority booking', '—', '✓', '✓'],
+                ['1-on-1 coaching', '—', '—', '1/month'],
+                ['Coaching discount', '—', '20%', '40%'],
+                ['Guest passes', '—', '2/month', 'Unlimited'],
+                ['Dedicated locker', '—', '—', '✓'],
+              ].map(([feature, ...vals]) => (
+                <tr key={feature} style={{ borderBottom: '1px solid var(--color-border)' }}>
+                  <td className="py-3 pr-4 font-medium">{feature}</td>
+                  {vals.map((v, i) => (
+                    <td key={i} className="py-3 px-4 text-center" style={{ color: v === '—' ? 'var(--color-muted)' : v === '✓' ? '#3DD68C' : 'var(--color-text)' }}>{v}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         {/* FAQ Section */}
         <div className="max-w-2xl mx-auto">
           <h2
