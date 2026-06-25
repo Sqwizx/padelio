@@ -25,6 +25,7 @@ const padelioFont = localFont({
   src: '../public/fonts/arial_narrow_7.ttf',
   variable: '--font-padelio',
   display: 'swap',
+  fallback: ['Arial Narrow', 'Arial', 'sans-serif'],
 });
 
 export const metadata: Metadata = {
