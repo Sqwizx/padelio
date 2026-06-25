@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { programs } from '../../../lib/data';
 
 export function generateStaticParams() {
@@ -15,7 +16,7 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
     <div className="pt-24 pb-24" style={{ background: 'var(--color-bg)' }}>
       {/* Hero image */}
       <div className="relative h-72 md:h-96 overflow-hidden mb-12">
-        <img src={program.img} alt={program.imgAlt} className="w-full h-full object-cover" />
+        <Image src={program.img} alt={program.imgAlt} fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         <div className="absolute bottom-8 left-8 right-8">
           <h1

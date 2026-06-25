@@ -1,5 +1,6 @@
 'use client';
 import { useRef } from 'react';
+import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
 import { gsap } from '../../lib/gsap';
 import { stories } from '../../lib/data';
@@ -29,10 +30,11 @@ export function Stories() {
               key={s.cat}
               className="story-card group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer"
             >
-              <img
+              <Image
                 src={s.img}
                 alt={s.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 p-4">

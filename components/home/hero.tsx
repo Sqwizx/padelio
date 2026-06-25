@@ -1,6 +1,7 @@
 'use client';
 import { useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
 import { gsap } from '../../lib/gsap';
 
@@ -75,11 +76,7 @@ export function Hero() {
 
         {/* Right: image */}
         <div className="hero-animate relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-auto md:h-[540px]">
-          <img
-            src="/hero.jpg"
-            alt="Padel court at Padelio"
-            className="w-full h-full object-cover"
-          />
+          <Image src="/hero.jpg" alt="Padel court at Padelio" fill className="object-cover" priority />
           {/* Floating badge */}
           <div
             className="absolute bottom-6 left-6 px-4 py-3 rounded-xl backdrop-blur-sm"

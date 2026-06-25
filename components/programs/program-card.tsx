@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Program } from '../../lib/types';
 
 export function ProgramCard({ program }: { program: Program }) {
@@ -8,10 +9,11 @@ export function ProgramCard({ program }: { program: Program }) {
       style={{ background: 'var(--color-surface)', boxShadow: 'var(--shadow-soft)' }}
     >
       <div className="relative aspect-[16/9] overflow-hidden">
-        <img
+        <Image
           src={program.img}
           alt={program.imgAlt}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       <div className="p-6 flex flex-col gap-3 flex-1">
