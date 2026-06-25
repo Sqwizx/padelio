@@ -72,7 +72,7 @@ export function Nav() {
         style={{ background: 'var(--color-bg)', borderBottom: '1px solid transparent', transition: 'background 0.3s' }}
       >
         <Link href="/" className="flex items-center gap-2 text-xl tracking-tight" style={{ fontFamily: 'var(--font-padelio)', color: 'var(--color-primary-dark)' }}>
-          <img src="/icons/icon.svg" alt="" aria-hidden="true" width={28} height={28} />
+          <img src="/icons/icon.svg" alt="" aria-hidden="true" width={28} height={28}/>
           PADELIO
         </Link>
 
