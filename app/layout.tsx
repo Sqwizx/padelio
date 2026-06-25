@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Urbanist, DM_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
 import { Toaster } from '../components/ui/sonner';
 import { Nav } from '../components/nav';
 import { Footer } from '../components/footer';
@@ -20,6 +21,12 @@ const dmSans = DM_Sans({
   display: 'swap',
 });
 
+const padelioFont = localFont({
+  src: '../public/fonts/arial_narrow_7.ttf',
+  variable: '--font-padelio',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: 'Padelio — Premium Padel Academy',
   description: 'World-class padel courts, expert coaching programs, and a vibrant community. Join Padelio today.',
@@ -27,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${urbanist.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${urbanist.variable} ${dmSans.variable} ${padelioFont.variable}`}>
       <body>
         <Nav />
         <main>{children}</main>
