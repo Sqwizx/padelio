@@ -4,6 +4,7 @@ import { Toaster } from '../components/ui/sonner';
 import { Nav } from '../components/nav';
 import { Footer } from '../components/footer';
 import './globals.css';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 const urbanist = Urbanist({
   subsets: ['latin'],

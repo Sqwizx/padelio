@@ -1,46 +1,41 @@
-import { Skeleton } from '../../components/ui/skeleton';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 export default function Loading() {
   return (
-    <div className="pt-32 pb-24" style={{ background: 'var(--color-bg)' }}>
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
-        <div>
-          <Skeleton className="h-6 w-28 rounded-full mb-6" />
-          <Skeleton className="h-12 w-64 mb-2" />
-          <Skeleton className="h-12 w-48 mb-10" />
-          <Skeleton className="h-5 w-full mb-2" />
-          <Skeleton className="h-5 w-5/6 mb-10" />
-          <div className="flex flex-col gap-4">
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <Skeleton className="w-9 h-9 rounded-lg flex-shrink-0" />
-                <Skeleton className="h-4 w-48" />
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="rounded-2xl p-8 flex flex-col gap-5" style={{ background: 'white', boxShadow: 'var(--shadow-elevated)' }}>
-          <div className="grid md:grid-cols-2 gap-5">
-            <div className="flex flex-col gap-1.5">
-              <Skeleton className="h-3 w-12" />
-              <Skeleton className="h-12 w-full rounded-xl" />
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <Skeleton className="h-3 w-10" />
-              <Skeleton className="h-12 w-full rounded-xl" />
+    <SkeletonTheme baseColor="#E8E8E8" highlightColor="#F2F2F2">
+      <div className="pt-32 pb-24" style={{ background: 'var(--color-bg)' }}>
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
+          <div>
+            <Skeleton width={112} height={24} borderRadius={999} style={{ marginBottom: 24 }} />
+            <Skeleton width={256} height={48} style={{ marginBottom: 8 }} />
+            <Skeleton width={192} height={48} style={{ marginBottom: 40 }} />
+            <Skeleton count={2} height={20} style={{ marginBottom: 6 }} />
+            <div style={{ marginTop: 40, display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {Array.from({ length: 3 }).map((_, i) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <Skeleton width={36} height={36} borderRadius={8} />
+                  <Skeleton width={192} height={16} />
+                </div>
+              ))}
             </div>
           </div>
-          <div className="flex flex-col gap-1.5">
-            <Skeleton className="h-3 w-24" />
-            <Skeleton className="h-12 w-full rounded-xl" />
+          <div style={{ borderRadius: 16, padding: 32, background: 'white', boxShadow: 'var(--shadow-elevated)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 20 }}>
+              <div><Skeleton width={48} height={12} style={{ marginBottom: 6 }} /><Skeleton height={48} borderRadius={12} /></div>
+              <div><Skeleton width={40} height={12} style={{ marginBottom: 6 }} /><Skeleton height={48} borderRadius={12} /></div>
+            </div>
+            <div style={{ marginBottom: 20 }}>
+              <Skeleton width={96} height={12} style={{ marginBottom: 6 }} />
+              <Skeleton height={48} borderRadius={12} />
+            </div>
+            <div style={{ marginBottom: 20 }}>
+              <Skeleton width={64} height={12} style={{ marginBottom: 6 }} />
+              <Skeleton height={128} borderRadius={12} />
+            </div>
+            <Skeleton height={48} borderRadius={999} />
           </div>
-          <div className="flex flex-col gap-1.5">
-            <Skeleton className="h-3 w-16" />
-            <Skeleton className="h-32 w-full rounded-xl" />
-          </div>
-          <Skeleton className="h-12 w-full rounded-full" />
         </div>
       </div>
-    </div>
+    </SkeletonTheme>
   );
 }

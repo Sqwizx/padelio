@@ -76,7 +76,7 @@ export function Hero() {
 
         {/* Right: image */}
         <div className="hero-animate relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-auto md:h-[540px]">
-          <Image src="/hero.jpg" alt="Padel court at Padelio" fill className="object-cover" priority />
+          <Image src="/hero.jpg" alt="Padel court at Padelio" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" priority />
           {/* Floating badge */}
           <div
             className="absolute bottom-6 left-6 px-4 py-3 rounded-xl backdrop-blur-sm"

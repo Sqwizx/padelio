@@ -16,7 +16,7 @@ export const programs: Program[] = [
     subtitle: 'Fun-first learning for ages 6–16',
     tags: ['Fun Learning', 'Coordination', 'Team Spirit', 'Motor Skills'],
     desc: 'Designed for young players aged 6–16, this program blends skill development with games that keep kids engaged, active, and coming back for more.',
-    img: '/programs-juniors.png',
+    img: '/programs-juniors.jpg',
     imgAlt: 'Junior padel training',
   },
   {

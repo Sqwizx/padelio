@@ -1,30 +1,30 @@
-import { Skeleton } from '../../../components/ui/skeleton';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 export default function Loading() {
   return (
-    <div className="pt-24 pb-24" style={{ background: 'var(--color-bg)' }}>
-      <Skeleton className="w-full h-72 md:h-96" />
-      <div className="max-w-3xl mx-auto px-6 mt-10">
-        <div className="flex flex-wrap gap-2 mb-8">
-          {Array.from({ length: 4 }).map((_, i) => (
-            <Skeleton key={i} className="h-7 w-24 rounded-full" />
-          ))}
+    <SkeletonTheme baseColor="#E8E8E8" highlightColor="#F2F2F2">
+      <div className="pt-24 pb-24" style={{ background: 'var(--color-bg)' }}>
+        <Skeleton height={384} borderRadius={0} />
+        <div className="max-w-3xl mx-auto px-6 mt-10">
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' as const, marginBottom: 32 }}>
+            {Array.from({ length: 4 }).map((_, i) => (
+              <Skeleton key={i} width={96} height={28} borderRadius={999} />
+            ))}
+          </div>
+          <Skeleton count={3} height={20} style={{ marginBottom: 6 }} />
+          <div style={{ borderRadius: 16, padding: 24, background: 'var(--color-surface)', marginTop: 40, marginBottom: 40 }}>
+            <Skeleton width={160} height={24} style={{ marginBottom: 16 }} />
+            {Array.from({ length: 3 }).map((_, i) => (
+              <div key={i} style={{ display: 'flex', gap: 32, paddingBlock: 12, borderBottom: '1px solid var(--color-border)' }}>
+                <Skeleton width={80} height={16} />
+                <Skeleton width={120} height={16} />
+                <Skeleton width={60} height={16} />
+              </div>
+            ))}
+          </div>
+          <Skeleton width={192} height={48} borderRadius={999} />
         </div>
-        <Skeleton className="h-5 w-full mb-2" />
-        <Skeleton className="h-5 w-5/6 mb-2" />
-        <Skeleton className="h-5 w-4/5 mb-10" />
-        <div className="rounded-2xl p-6 mb-10" style={{ background: 'var(--color-surface)' }}>
-          <Skeleton className="h-6 w-40 mb-4" />
-          {Array.from({ length: 3 }).map((_, i) => (
-            <div key={i} className="flex gap-8 py-3 border-b" style={{ borderColor: 'var(--color-border)' }}>
-              <Skeleton className="h-4 w-24" />
-              <Skeleton className="h-4 w-32" />
-              <Skeleton className="h-4 w-16" />
-            </div>
-          ))}
-        </div>
-        <Skeleton className="h-12 w-48 rounded-full" />
       </div>
-    </div>
+    </SkeletonTheme>
   );
 }
