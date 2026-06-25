@@ -6,7 +6,7 @@ export default function CourtsPage() {
   return (
     <div style={{ background: 'var(--color-bg)' }}>
       <div className="relative h-72 md:h-[500px] overflow-hidden">
-        <Image src="/courts-hero.jpg" alt="Padelio courts" fill sizes="100vw" className="object-cover" priority />
+        <Image src="/images/courts-hero.jpg" alt="Padelio courts" fill sizes="100vw" className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div>

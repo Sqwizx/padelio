@@ -7,7 +7,7 @@ export const programs: Program[] = [
     subtitle: 'Start your padel journey',
     tags: ['Confidence Building', 'Fundamentals', 'Ball Control', 'Court Awareness'],
     desc: 'Perfect for those new to padel. Our structured beginner program covers all the basics — grip, stance, serve, and rally — in a fun, welcoming environment.',
-    img: '/programs-beginners.jpg',
+    img: '/images/programs-beginners.jpg',
     imgAlt: 'Beginner padel session',
   },
   {
@@ -16,7 +16,7 @@ export const programs: Program[] = [
     subtitle: 'Fun-first learning for ages 6–16',
     tags: ['Fun Learning', 'Coordination', 'Team Spirit', 'Motor Skills'],
     desc: 'Designed for young players aged 6–16, this program blends skill development with games that keep kids engaged, active, and coming back for more.',
-    img: '/programs-juniors.jpg',
+    img: '/images/programs-juniors.jpg',
     imgAlt: 'Junior padel training',
   },
   {
@@ -25,7 +25,7 @@ export const programs: Program[] = [
     subtitle: 'Fitness and technique in balance',
     tags: ['Fitness Focus', 'Technique', 'Strategy', 'Social Play'],
     desc: 'Our adult program combines cardio fitness with tactical padel skills. Suitable for all fitness levels — play at your own pace and improve every session.',
-    img: '/programs-adults.jpg',
+    img: '/images/programs-adults.jpg',
     imgAlt: 'Adult padel class',
   },
   {
@@ -34,7 +34,7 @@ export const programs: Program[] = [
     subtitle: 'Compete at the next level',
     tags: ['Advanced Tactics', 'Competition Prep', 'Performance', 'Match Play'],
     desc: 'For competitive players looking to sharpen their game. Intensive sessions focus on tournament-level tactics, mental resilience, and physical conditioning.',
-    img: '/programs-professionals.jpg',
+    img: '/images/programs-professionals.jpg',
     imgAlt: 'Professional padel training',
   },
   {
@@ -43,7 +43,7 @@ export const programs: Program[] = [
     subtitle: 'Personalized coaching at its finest',
     tags: ['Personalized Training', 'Mental Game', 'Peak Performance', 'Video Analysis'],
     desc: 'One-on-one sessions with our top coaches. Every drill, every rep is tailored to your specific weaknesses and goals. The fastest way to elevate your game.',
-    img: '/programs-elite.jpg',
+    img: '/images/programs-elite.jpg',
     imgAlt: 'Elite one-on-one coaching',
   },
 ];
@@ -97,19 +97,19 @@ export const testimonials: Testimonial[] = [
     quote: 'Padelio completely changed how I spend my weekends. The courts are world-class and the coaching staff genuinely cares about your progress.',
     name: 'Sofia Merano',
     role: 'Pro Member',
-    avatar: '/avatar-1.jpg',
+    avatar: '/images/avatar-1.jpg',
   },
   {
     quote: 'My kids beg to come every week. The junior program is so well structured — they\'ve improved more in 3 months than I expected in a year.',
     name: 'David Keller',
     role: 'Member of Club',
-    avatar: '/avatar-2.jpg',
+    avatar: '/images/avatar-2.jpg',
   },
   {
     quote: 'Best sports investment I\'ve made. The Elite membership pays for itself with the 1-on-1 sessions alone. Absolutely recommend.',
     name: 'Amara Diallo',
     role: 'Elite Member',
-    avatar: '/avatar-3.jpg',
+    avatar: '/images/avatar-3.jpg',
   },
 ];
 
@@ -123,10 +123,10 @@ export const stats: Stat[] = [
 ];
 
 export const stories: Story[] = [
-  { cat: 'Coaching', title: 'How our coaches build champions', img: '/story-coaching.jpg', alt: 'Coaching session' },
-  { cat: 'Community', title: 'A community that celebrates together', img: '/story-community.jpg', alt: 'Community event' },
-  { cat: 'Training', title: 'Training methods that deliver results', img: '/story-training.jpg', alt: 'Training' },
-  { cat: 'Courts', title: 'Our courts — built for performance', img: '/story-courts.jpg', alt: 'Padel court' },
+  { cat: 'Coaching', title: 'How our coaches build champions', img: '/images/story-coaching.jpg', alt: 'Coaching session' },
+  { cat: 'Community', title: 'A community that celebrates together', img: '/images/story-community.jpg', alt: 'Community event' },
+  { cat: 'Training', title: 'Training methods that deliver results', img: '/images/story-training.jpg', alt: 'Training' },
+  { cat: 'Courts', title: 'Our courts — built for performance', img: '/images/story-courts.jpg', alt: 'Padel court' },
 ];
 
 export const benefits: Benefit[] = [

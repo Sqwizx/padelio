@@ -11,10 +11,10 @@ const values = [
 ];
 
 const coaches = [
-  { name: 'Marco Alves', role: 'Head Coach', img: '/coach-1.jpg' },
-  { name: 'Sofia Ribeiro', role: 'Junior Program Lead', img: '/coach-2.jpg' },
-  { name: 'Luca Ferretti', role: 'Performance Coach', img: '/coach-3.jpg' },
-  { name: 'Ana Costa', role: 'Fitness & Conditioning', img: '/coach-4.jpg' },
+  { name: 'Marco Alves', role: 'Head Coach', img: '/images/coach-1.jpg' },
+  { name: 'Sofia Ribeiro', role: 'Junior Program Lead', img: '/images/coach-2.jpg' },
+  { name: 'Luca Ferretti', role: 'Performance Coach', img: '/images/coach-3.jpg' },
+  { name: 'Ana Costa', role: 'Fitness & Conditioning', img: '/images/coach-4.jpg' },
 ];
 
 export function AboutContent() {
